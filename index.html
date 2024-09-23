@@ -10,9 +10,35 @@
             window.location.href = "https://www.xbox.com/ja-JP/play/launch/fortnite/BT5P2X999VH2"; // BサイトのURLを指定
         };
     </script>
+    <h1>少々お待ちください。Xbox Cloud Gaming Fortniteを開いています...</h1>
+      <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    #loading {
+      font-size: 50px;
+      font-family: Arial, sans-serif;
+      white-space: pre;
+    }
+  </style>
 </head>
 <body>
-    <h1>フォートナイト</h1>
-    <p>このページは自動的にXbox Cloud Gamingへリダイレクトされます。</p>
+  <div id="loading">読み込み中.</div>
+
+  <script>
+    const loadingText = document.getElementById('loading');
+    const messages = ['読み込み中.  ', '読み込み中.. ', '読み込み中...'];
+    let index = 0;
+
+    setInterval(() => {
+      loadingText.textContent = messages[index];
+      index = (index + 1) % messages.length;
+    }, 200);
+  </script>
 </body>
 </html>
