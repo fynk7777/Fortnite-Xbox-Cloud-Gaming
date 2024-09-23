@@ -5,40 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="fortnite_icon.png" type="image/png">
     <title>フォートナイト</title>
-
-      <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    #loading {
-      font-size: 70px;
-      font-family: Arial, sans-serif;
-      white-space: pre;
-      font-weight: bold;
-    }
-    h3 {
-      margin-bottom: 20px; /* 見出しの下にスペースを追加 */
-    }
-  </style>
+      <script>
+        window.onload = function() {
+            window.location.href = "https://www.xbox.com/ja-JP/play/launch/fortnite/BT5P2X999VH2"; // BサイトのURLを指定
+        };
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #loading {
+            font-size: 70px;
+            font-family: Arial, sans-serif;
+            white-space: pre;
+            font-weight: bold;
+        }
+        h3 {
+            margin-bottom: 20px; /* 見出しの下にスペースを追加 */
+        }
+    </style>
 </head>
 <body>
- 　<h3>少々お待ちください。Xbox Cloud Gaming Fortniteを開いています...</h3><br>
-  <div id="loading">読み込み中</div>
+    <h3>少々お待ちください。Xbox Cloud Gaming Fortniteを開いています...</h3>
+    <div id="loading">読み込み中</div>
 
-  <script>
-    const loadingText = document.getElementById('loading');
-    const messages = ['読み込み中.  ', '読み込み中.. ', '読み込み中...'];
-    let index = 0;
+    <script>
+        const loadingText = document.getElementById('loading');
+        const messages = ['読み込み中   ','読み込み中.  ', '読み込み中.. ', '読み込み中...'];
+        let index = 0;
 
-    setInterval(() => {
-      loadingText.textContent = messages[index];
-      index = (index + 1) % messages.length;
-    }, 400);
-  </script>
+        setInterval(() => {
+            loadingText.textContent = messages[index];
+            index = (index + 1) % messages.length;
+        }, 400);
+    </script>
 </body>
 </html>
